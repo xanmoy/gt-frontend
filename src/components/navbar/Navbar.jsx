@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import Logo from '../assets/logo.png'
-import cart_icon from '../assets/cart_icon.png'
+// import cart_icon from '../assets/cart_icon.png'
+import { ShoppingCart } from 'lucide-react';
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 const Navbar = () => {
@@ -23,7 +24,10 @@ const Navbar = () => {
             </ul>
             <div className="nav-login-cart">
                 <Link to='/login'><button>Login</button></Link>
-                <Link to='/cart'><img src={cart_icon} alt="cart" /></Link>
+                <Link to='/cart'>
+                    {/* <img src={cart_icon} alt="cart" /> */}
+                    <ShoppingCart className='hover:text-[#ff4141]' size={44} />
+                </Link>
                 <div className="nav-cart-count">0</div>
             </div>
         </div>
